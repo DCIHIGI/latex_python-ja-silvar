@@ -1,0 +1,401 @@
+\documentclass[9.5pt, twocolumn]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{wrapfig}
+\usepackage{cancel}
+
+\usepackage{enumerate}
+\usepackage{vmargin}
+\usepackage{multicol}
+\usepackage{pgffor}
+\usepackage{blindtext}
+\usepackage{lmodern}
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{hyperref}
+\usepackage{natbib}
+
+\usepackage{fancyhdr} 
+\usepackage{blindtext}
+\usepackage{parskip}
+\usepackage{titlesec}
+
+\setpapersize{A4}
+\setmargins{1.5 cm}       
+{1.0 cm}                        
+{18 cm}                    
+{25.5 cm}                    
+{5 pt}                           
+{0.5 cm}                           
+{100 pt}                             
+{0cm}   
+
+\renewcommand{\thesection}{\Roman{section}}
+\titleformat*{\section}{\small\bfseries}
+\renewcommand{\bibsection}{}
+
+\begin{document}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyheadoffset{0cm}
+\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\footrulewidth}{0pt}
+\fancyhead[R]{\thepage}
+\fancypagestyle{plain}{
+\fancyhf{}
+\fancyhead[R]{\thepage}
+\setcounter{page}{1}
+}
+
+
+
+\title{\large \textbf{Hints on halo evolution in SFDM models with galaxy observations}}
+\author{
+\normalsize Alma X. González-Morales,$^{1}$ Alberto Diez-Tejedor,$^{2}$ L. Arturo Ureña-López,$^{2}$ and Octavio Valenzuela$^{3}$\\
+\textit{
+\small{$^{1}$Instituto de Ciencias Nucleares, Universidad Nacional Autónoma de México,}}\\
+\textit{
+\small{ Circuito Exterior C.U., A.P. 70-543, México D.F. 04510, México}}\\
+\textit{
+\small{$^{2}$Departamento de Física, División de Ciencias e Ingenierías,}}\\
+\small{\textit{Campus León, Universidad de Guanajuato, León 37150, México}}\\
+\textit{\small $^{3}$ Instituto de Astronomía, Universidad Nacional Autónoma de México,}\\
+\textit{\small Circuito Exterior C.U., A.P. 70-264, México D.F. 04510, México}
+\date{(\small Dated: {October 29, 2018})}
+}
+
+
+\twocolumn[\begin{@twocolumnfalse}
+\maketitle 
+\thispagestyle{empty}
+    \small{ A massive, self-interacting scalar field has been considered as a possible candidate for the dark matter in the universe. We present an observational constraint to the model arising from strong lensing observations in galaxies. The result points to a discrepancy in the properties of scalar field dark matter halos for dwarf and lens galaxies, mainly because halo parameters are directly related to physical quantities in the model. This is an important indication that it becomes necessary to have a better understanding of halo evolution in scalar field dark matter models, where the presence of baryons can play an important role.\\
+    
+    PACS numbers: 95.30.Sf, 95.35.$+$d, 98.62.Gq, 98.62.Sb.}\\
+\end{@twocolumnfalse}]
+
+\section[I]{\centering INTRODUCTION}
+The nature of dark matter (DM) remains elusive today,
+even though a generic cold particle weakly coupled to the
+standard model seems to be the most promising candidate
+\cite{Bertone_2005}. Treating DM as a bunch of classical particles is
+an appropriate effective description for many physical situations. However, if DM is composed of bosons, the zero
+mode can develop a non-vanishing expectation value; this
+effect is usually known as Bose-Einstein condensation. A
+condensed phase does not admit a description in terms
+of classical particles, and the concept of a coherent excitation
+(i.e. a classical field) is more appropriate for practical
+purposes \cite{Matos_2001}. A specifc realization of this scenario
+can be provided by the axion \cite{Sikivie_2009}, see also \cite{B_hm_2004}.\\*
+In this paper we shall explore the lensing properties
+of a generic model of DM particles in a condensate, and
+compare the conditions necessary to produce strong lensing
+with those required to explain the dynamics of dwarf
+galaxies. As a result we will get some insight into halo
+evolution arising from this type of models.
+In particular, we will consider the case of a complex,
+massive, self-interacting scalar field $\phi$ satisfying
+the Klein-Gordon (KG) equation, $\phi-(mc/\hbar)^2-\lambda|\phi|^2\phi=0$, with the box denoting the d'Alembertian
+operator in four dimensions. For those natural situations
+in which the scalar field mass m is much smaller
+than the Planck scale, $m_{Planck}=(\hbar c/G)^{1/2}$, such that $\Lambda\equiv\lambda m^{2}_{Planck}/4\pi m^2\gg 1$, the coherent (self-gravitating,
+spherically symmetric) solutions to the KG equation admit
+
+a very simple expression for the mass density \cite{Lee_1996},\cite{Arbey_2003}
+\begin{equation}
+\rho(r)=\left\{\begin{array}{ccc}
+\rho_{c} \frac{\sin \left(\pi r / r_{\max }\right)}{\left(\pi r / r_{\max }\right)} & \text { for } \quad r<r_{\max } \\
+0 & \text { for } \quad r \geq r_{\max }
+\end{array}\right.
+\label{eqn:eq1}
+\end{equation}
+
+As usual we will refer to this model as scalar field dark
+matter (SFDM). Here $r_{max}\equiv \sqrt{\pi^2\Lambda/2}(\hbar/2mc)$ is a constant
+with dimensions of length (notice that $r_{max}$ is just
+the Compton wavelength of the scalar particle, $\hbar/mc$,
+scaled by a factor of order $\Lambda^{1/2}$), and c the density at
+the center of the configuration. The mass density profile
+in Eq.(\ref{eqn:eq1}) leads to compact objects of size rmax, and typical
+masses, $4\rho_cr^3_{max}/\pi$, that vary from configuration to
+configuration according to the value of the central density.\\ Eq.(\ref{eqn:eq1}) was obtained without taking into account the
+gravitational influence of any other matter sources, and
+assuming that all the scalar particles are in the condensate.
+It has been used as a first order approximation to
+describe the distribution of matter in dwarf shperoidals,
+which are expected to be DM dominated [6,8]. The mass
+distribution would be smooth close to the center of these
+galaxies, alleviating the cusp/core problem motivated by
+the discrepancies between the observed high resolution
+rotation curves and the profiles suggested by N-body simulations
+[9]; see however [10].\\
+The dynamics of dwarf galaxies suggests a selfinteracting
+scalar with $m^4/\lambda\sim 50-75(eV/c^2)^4$ (i.e.
+$r_{max} \sim 5.5-7KPc)$, and typical central densities of the
+order of $\rho_c\sim 10^{-3}M_{\odot}/pc^3$ see Ref. [6]. We are aware
+that Milky Way size galaxies are, at least, an order of
+magnitude larger than this value of rmax, and then they
+do not fit in this model as it stands. Nonetheless, if
+not all the DM particles are in the condensate, there is
+a possibility to have gravitational configurations where
+the inner regions are still described by the mass density
+profile in Eq. (\ref{eqn:eq1}), wrapped in a cloud of non-condensed
+particles \cite{Harko_2011}. For the purpose of this paper we do not
+need to specify the complete halo model. This is because
+strong lensing is not very sensitive to the mass distribution
+outside the Einstein radius, at most of the order of
+a few Kpc, just bellow the expected value of $r_{max}$. We
+could not neglect the exterior profile of the halo if we were
+interested, for instance, in weak lensing observations.
+
+
+\section{\centering LENSING PROPERTIES OF SFDM HALOS}
+
+In the weak field limit the gravitational lensing produced by a mass distribution can be read directly from the density profile. As usual we assume spherical symmetry, and use the thin lens approximation, that is, the size of the object is negligible when compared to the other length scales in the configuration, i.e. the (angular) distances between the observer and the lens, $D_{OL}$, the lens and the source, $D_{LS}$, and from the observer to the source, $D_{OS}$.
+
+Under these assumptions the lens equation takes the form
+
+\begin{equation}
+\beta=\theta-\frac{M(\theta)}{\pi D_{\mathrm{OL}}^{2} \theta \Sigma_{\mathrm{cr}}},
+\label{eqn:eq2}
+\end{equation}
+
+with $\beta$ and $\theta$ denoting the actual (unobservable) angular
+position of the source, and the apparent (observable) angular
+position of the image, respectively, both measured
+with respect to the line-of-sight [12]. The (projected)
+mass enclosed in a circle of radius $\xi$, $M(\xi)$, is deFIned from the (projected) surface mass density, $\Sigma(\xi)$, through
+
+\begin{equation}
+\Sigma(\xi) \equiv \int_{-\infty}^{\infty} d z \rho(z, \xi), \quad M(\xi) \equiv 2 \pi \int_{0}^{\xi} d \xi^{\prime} \xi^{\prime} \Sigma\left(\xi^{\prime}\right).
+\label{eqn:eq3}
+\end{equation}
+
+Here $\xi=D_{OL}\theta$ is a radical coordinate in the lens plane, and $z$ a coordinate in the orthogonal direction. Finally $\sum_{cr}\equiv c^2 D_{OS}/4\pi GD_{OL}D_{LS}$ is a critical value for the surface density. 
+
+In general, Eq. (\ref{eqn:Ec2}) will be non-linear in $\theta$ and it could
+be possible that for a given position of the source, $\beta$ there
+would be multiple solutions (i.e. multiple images) for
+the angle $\theta$. This is what happens in the strong lensing
+regime to be discussed below. One particular case is that
+with a perfect alignment between the source and the lens,
+that actually defines the Einstein ring, with an angular
+radius of $\theta_E\equiv\theta(\beta=0)$.
+
+For a SFDM halo, and in terms of the normalized lenghts $\xi_{*}\equiv \xi/r_{max}$ and $z_*\equiv z/r_{max}$, the surface mass density takes the form
+
+\begin{equation}
+\Sigma_{\mathrm{SFDM}}\left(\xi_{*}\right)=\frac{2 \rho_{c} r_{\mathrm{max}}}{\pi} \int_{0}^{z_{\max }} \frac{\sin \left(\pi \sqrt{\xi_{*}^{2}+z_{*}^{2}}\right)}{\sqrt{\xi_{*}^{2}+z_{*}^{2}}} d z_{*},
+\label{eqn:eq4}
+\end{equation}
+
+with $0\leq\xi_{*}\leq1$ and $z_{max}=\sqrt{1-\xi_{*}^2}$. A similar expression can be obtained for the mass enclosed in a circle or radius $\xi$, see Eq. (\ref{eqn:eq3}) above. Here we are not considering the effect of a scalar cloud surrounding the condensate. For $r\lesssim r_{max}$ this will appear as a projection effect, which is usually considered to be small [13]. Indeed, we have corroborated that the inclusion of an outer isothermal sphere does not affect the conclusions of this
+paper. With the use of  the expression for the projected mass, $M_{SFDM}(\xi_{*})$, the lens equation simplifies to
+
+\begin{equation}
+\beta_{*}\left(\theta_{*}\right)=\theta_{*}-\bar{\lambda} \frac{m\left(\theta_{*}\right)}{\theta_{*}}
+\label{eqn:eq5}
+\end{equation}
+
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.8]{grafica1.png}
+    \caption{The lens equation of a SFDM halo model EQ. 5, as a function of $\bar{\lambda}$. The roots define the Einstein radius, $\theta_{*E}$, and its local maximum (minimum) the critical impact parameter, $\beta_{*cr}$. Both quantities are wll defined only for values of $\bar{\lambda}>\bar{\lambda_{cr}}\simeq 0.27$, which is the threshold value for strong lensing.}
+    \label{fig:Grafica1}
+\end{figure}
+    
+
+
+where $m(\xi_*)\equiv M_{SFDM}(\xi_*/\rho_cr_{max}^3)$ is a normalized mass
+function, evaluated numerically. Here $\beta_{*}=D_{OL}\beta r_{max}$ and $\theta_{*}=D_{OL}\theta/r_{max}$ are the normalized angular positions
+of the source and images, respectively, and the parameter $\bar{\lambda}$ is given by
+
+\begin{equation}
+\bar{\lambda} \equiv \frac{\rho_{c} r_{\max }}{\pi \Sigma_{\mathrm{cr}}}=0.57 h^{-1}\left(\frac{\rho_{c}}{M_{\odot} \mathrm{pc}^{-3}}\right)\left(\frac{r_{\mathrm{max}}}{\mathrm{kpc}}\right) \frac{d_{\mathrm{OL}} d_{\mathrm{LS}}}{d_{\mathrm{OS}}}
+\label{eqn:eq6}
+\end{equation}
+
+In order to avoid confusion with the self-interaction term, $\lambda$, we have introduced a bar in the new parameter $\bar{\lambda}$. We have also defined the reduced angular distances $d_A\equiv D_AH_0/c$, and considered $H_0\equiv 100h\text{(km/s)}/Mpc$ as the Hubble constant today, with $h=0.710 \pm 0.025$[14].
+
+In Fig. \ref{fig:Grafica1} we show the behavior of the lens equation (\ref{eqn:eq5})
+as the $\bar{\lambda}$ parameter varies (i.e. for different values of the
+combination $\rho_cr_{max}$). Some notes are in turn: \textit{i)} Strong
+lensing can be produced only for configurations with $\bar{\lambda}>\bar{\lambda}_{cr}\simeq 0.27$, and \textit{ii}) For these configurations, only those with an impact parameter $|\beta_*|<\beta_{*cr}$ can produce three images (note that the actual value of $\beta_{*cr}$ depends on the parameter $\bar{\lambda}, \beta_{*cr}(\bar{\lambda})$).
+
+These conditions on the SFDM profile are very similar
+to those obtained for the Burkert model in [15]; this is not
+surprising because both of them have a core in radius. In
+that sense SFDM halos are analogous to those proposed
+by Burkert [16], but with the advantage that their properties
+are clearly connected to physical parameters in the
+model.
+
+In figure \ref{fig:Grafica2} we show the magnitude of the Einstein radius, $\theta_{*E}$m as a function of the parameter $\bar{\lambda}$, where for comparison we hace also spotted the same quantity for the NFW [17] and Burkert [15] profiles. The minimum value of $\bar{\lambda}$ needed to produce multiple images is higher for a SFDM halo, $\bar{\lambda_{cr}^{NFW}}=0<\bar{\lambda_{cr}^{Burkert}}=2/\pi^2<\bar{\lambda_{cr}^{SFDM}}\simeq 0.27$. (Notice that there is an extra factor of 11/4$\pi$ in our definition of $\bar{\lambda}$ when compared to that reported in Ref. [15].) SFDM halos seem to require larger values of $\bar{\lambda}$ in order to produce Einstein rings of similar magnitude
+to those obtained for the other profiles, but this is in part
+due to projection effects that have not been considered
+in this paper [13, 18], as we shown in Table (\ref{table:Tabla1}).
+
+\begin{figure}
+    \includegraphics[scale=0.8]{grafica2.png}
+    \caption{The Einstein radius, $\theta_{*E}$, as a function of $\bar{\lambda}^i$, for SFDM (solid line), NFW (dashed line), and Burkert (dotted lined) halo models. Einstein rings of similar magnitude require $\bar{\lambda}^{NFW}<\bar{\lambda}^{Burkert}<\bar{\lambda}^{SFDM}$}
+    \label{fig:Grafica2}
+\end{figure}
+
+
+\begin{table*}
+\centering
+\begin{tabular}{|l|l|l|l|l|} 
+\hline
+\multicolumn{2}{|c|}{DYNAMICS OF GALAXIES}                  & \multicolumn{3}{c|}{GALAXY LENSING}                                                        \\ 
+\hline
+\multicolumn{1}{|c|}{Galaxy} & \multicolumn{1}{c|}{$\rho_{c} r_{\mathrm{max}} \left[ M_{\sigma} \mathrm{PC}^{-2}\right]$} & \multicolumn{1}{c|}{Galaxy} & \multicolumn{1}{c|}{$f_{dist}$} & \multicolumn{1}{c|}{$\rho_{c} r_{\mathrm{max}} \left[ M_{\sigma} \mathrm{PC}^{-2}\right]$}  \\ 
+\hline
+Ho II                        & 36.19                        & J0008+0004                  & 6.61                         & 2029.68                       \\ 
+\hline
+DD0 154                      & 66.47                        & J1250+0523                  & 8.46                         & 2832.41                       \\ 
+\hline
+DDO 53                       & 67.53                        & J2341+0000                  & 9.12                         & 3053.38                       \\ 
+\hline
+IC2574                       & 81.89                        & J1538+5817                  & 11.74                        & 3930.44                       \\ 
+\hline
+NGC2366                      & 85.45                        & J0216+0813                  & 13.03                        & 4362.44                       \\ 
+\hline
+Ursa Minor                   & 104.72                       & J1106+5228                  & 15.74                        & 5269.75                       \\ 
+\hline
+Ho I                         & 120.23                       & J2321+0939                  & 16.23                        & 5433.8                        \\ 
+\hline
+DD0 39                       & 145.94                       & J1420+6019                  & 19.72                        & 6602.26                       \\ 
+\hline
+M81 dwB                      & 265.87                       & J0044+0113                  & 25.26                        & 8457.05                       \\
+\hline
+\end{tabular}
+\caption{Estimates of the product $\rho_{c}r_{max}$ for different galaxies. \textit{Left}. As reported in Refs. \cite{Arbey_2003}, using galactic dynamics.
+Right. Derived from equation (\ref{eqn:eq6}) in this paper; recall that these values represent a lower limit (here we show only a representative
+subsample of the SLACS survey). Note the difference of an order of magnitude between the values of $\rho_{c}r_{max}$ for dwarf galaxies
+in the local universe, and the lower limit of this same quantity for galaxies producing strong lensing at $z\sim 0.5$}
+\label{table:Tabla1}
+\end{table*}
+
+\section {\centering  Lensing vs Dynamics}
+
+Taking into account that in SFDM models there is acritical value for the parameter \(\bar{\lambda} , \bar{\lambda}_{cr} \simeq .027\), and con-sidering the definition in Eq. (\ref{eqn:eq5}), we can write the con-dition to produce strong lensing in the form \\
+\begin{equation}\label{eq:6}
+	\rho_{c} r_{max}[M_{\odot}pc^{-2}]  < 473.68 \hbar f_{dist}
+\end{equation}
+
+with \(f_{dist}\equiv d_{OS}/d_{OL}d_{LS}\) a distance factor.In  order  to  evaluate  the  right-hand-side  (r.h.s.)    of Eq. (\ref{eq:6}), we consider two surveys of multiply-imaged sys-tems,  the  CASTLES  [19]  and  the  SLACS  [20].   Fromthem  we  select  only  those  elements  for  which  the  red-shifts  of  the  source  and  the  lens  have  been  determined(which  amounts  to  approximately  60  elements  in  eachsurvey),  and  calculate  the  corresponding  distance  fac-torfdistfor  every  element  in  the  reduced  sample.   InCASTLES (SLACS) the distance factors are in the interval  \(4<f_{dist}<27, (6<f_{dist})<25\), with a mean value of \(f_{dist}\simeq 7, (f_{dist}\simeq 11)\), and then the r.h.s.  of Eq. (\ref{eq:6})takes on values in the range \(1400-9000, (2000-8500)\).Some representative elements from SLACS are shown inTable  I  (galaxy  lensing).   In  terms  of  the  mean  values,the inequality in Eq. (\ref{eq:6}) translates into
+ \begin{equation}\label{eq7a}
+ 	\rho_{c}r_{max}[M_{\odot}pc^{-2}]>2000, (CASTLES)
+ \end{equation}
+  \begin{equation}\label{7b}
+ 	\rho_{c}r_{max}[M_{\odot}pc^{-2}]>4000, (SLACS)
+ \end{equation}
+ 
+These  numbers  are  an  order  of  magnitude  greaterthan   those   obtained   from   dwarf   galaxies   dynamics, \(\rho_{C}r_{max}[M_{\odot}]\simeq 100\), , when interpreted using the samedensity profile [7]; see again Table \ref{table:Tabla1}. This is the main re-sult of the paper.  Remember that the value of \(r_{max}\) is re-lated to the fundamental parameters of the model, which are the mass of the scalar particle and the self-interactionterm, and it remains constant throughout the formationof cosmic structure.We must recall that inequalities in Eq.  (\ref{eq7a}) do not takeinto account the presence of baryons in galaxies.  Gravitydoes not distinguish between luminous and dark matter;then the contribution of the former to the lens could besignificant in some cases.  For instance, for those systemsin SLACS the stellar mass fraction within the Einsteinradius is 0.4, on average, with a scatter of 0.1 [21].We have corroborated that our estimates in Eq. (\ref{eq7a}) arenot sensitive to the inclusion of a baryonic component.To  see  that  we  add  the  contribution  of  a  de  Vacoulersurface brightness profile [22] to the lens equation,
+
+\begin{equation}\label{eq8a}
+	\beta_{}(\theta_{})=\theta_{}-\bar{\lambda} \frac{m(\theta_{})}{\theta_{}}-\bar{\lambda}{lum} \frac{f(\theta{}/r_{e*})}{\theta_{*}}
+\end{equation}
+
+ Here \(\bar\lambda\) is  a  parameter  analogous  to  that  given  in Eq (5b),
+ 
+\begin{equation}
+	\bar{\lambda}{lum}\equiv \frac{(M/L)M}{2\pi\sum{cr}}, 
+\end{equation} 
+
+and f(x) a dimensionless projected stellar mass,
+
+\begin{align*}\tag{12}
+	 f(x)=&\frac{1}{2520}[e^{q}(q^{7}-7q^{6}+42q^{5}-210q^{4}+840q^{3} \\ 
+	 &-2520q^{2}+5040q-5040)+5040],
+\end{align*}
+
+with \(q\equiv -7.76x^{-1/4}\). he  mass-to-light  ratio, M/L(from  a  Chabrier  initial  mass  function),  and  the  effec-tive radius, \(r_{e}\),for each system in SLACS are reportedin Ref. [21].  With the use of Eq.  (\ref{eq8a}) strong lensing is al-ways possible.  Consequently, we must impose a differentcondition to constrain the product, \(\rho_{c}r_{max}\) in each galaxy,such as demand the formation of Einstein rings of certainradius.
+o proceed we use a small subsample of SLACS that in-cludes configurations with the minimum, maximum, andmean  Einstein  radius,  and  stellar  surface  mass  density,respectively.  This is because the new lens equation is afunction of the ratio \(r_{e*}=r_{e}/r_{max}\); then, to compute themagnitudes of the Einstein radii, we shall fix the value of \(r_{max}\) a priori. 
+
+Using the new lens equation we find the value of \(\bar{\lambda}\) thatproduces the appropriate Einstein radius for each of theelements in the subsample.  This is done using two differ-ent values of \(r_{max}\):5 and 10 Kpc.  The resultant products \(\rho_{c}r_{max}\) are compatible (in order of magnitude) with theinequalities obtained from Eq.  (\ref{eq:6}).  Only for those sys-tems in the subsample with a high stellar surface massdensity  the  value  of \(\rho_{c}r_{max}\) can  decrease  substantially,but it is important to have in mind that all the possibleuncertainties associated to the distribution of the lumi-nous  matter,  like  the  choice  of  the  stellar  initial  massfunction,  will  be  more  relevant  in  such  cases.   In  gen-eral, these estimations are sensitive to the details of theparticular  configuration,  and  a  more  exhaustive  analy-sis,  considering  the  complete  sample,  will  be  presented elsewhere.
+
+\section{\centering DISCUSSION AND FINAL REMARK}
+We have shown that a discrepancy between lensing and
+dynamical studies appears if we consider that the SFDM
+mass density profile in Eq. (1) describes the inner regions
+of galactic halos at different redshifts, up to radii of order
+$5 - 10 Kpc.$ More  specifically have found that lens
+galaxies at $z \sim $0.5, if correctly described by a SFDM halo
+profile, should be denser than dwarf spheroidals in the
+local universe, in order to satisfy the conditions necessary
+to produce strong lensing.
+In principle nothing guarantees that halos of different
+kind of galaxies share the same physical properties.
+Our studies took into account galaxies that are intrinsically
+different in terms of their total mass and baryon
+concentration. While dwarf galaxies show low stellar surface
+brightness, stellar component in massive, early type
+galaxies is typically compact and dense.
+In the standard cosmological model the evolution of
+DM halos may trigger differences in concentrations for
+halos with different masses due to differences in the assembling
+epoch; smaller halos collapsed in an earlier and
+denser universe, therefore they are expected to be more
+concentrated. However, it is also well known that the
+presence of baryons during the assembly of galaxies can
+alter the density profile of the host halos and modify
+this tendency, making them shallower (supernova feedback
+[23]), or even cuspier (adiabatic contraction [24]).
+Therefore, the stellar distribution may reveal different
+dynamical evolution for low and high mass halos triggered
+by galaxy formation.
+For SFDM, the dynamical interaction between baryons
+and the scalar field may also modify the internal halo
+structure predicted by the model, Eq. (1), clarifying the
+discrepancy. For instance, if the concentration of stellar
+distribution were correlated with that of the halo,
+like in the adiabatic contraction model when applied to
+standard DM halos, this may explain our findings. But
+at this time it is unknown how compressible SFDM halos
+are, and if such effect will be enough to explain our
+results, because there are no predictions on its magnitude.
+If the modification triggered by baryons were insufficient, then it might be suggesting an intrinsic evolution
+of SFDM halos across cosmic time. For example, if big
+galaxies emerge as the result of the collision of smaller
+ones, then the central densities of the resultant galaxies
+would be naturally higher; after all, rmax is a constant
+in the model, and one would expect that total mass is
+preserved in galaxy-galaxy mergers. At this point we do
+not know which of these two mechanisms, the intrinsic to
+the model, or that due to the evolution of SFDM halos
+in the presence of baryons, is the dominant one. In that
+sense, a theoretical description of these processes may be
+very useful and welcome.
+A full picture requires a distribution of values for the
+central density generated from the evolution of the spectrum
+of primordial density perturbations after in
+ation.
+Such a result is not available now, but it is possible to
+start tracing this distribution with galaxy observations.
+We present, for the first time, observational constraints
+on the dynamical evolution of SFDM halos in the presence
+of baryons, that must be considered for future semianalytical/
+numerical studies of galaxy formation.
+
+\section {\centering ACKNOWLEDGMENTS}
+We are grateful to Juan Barranco for useful comments.
+This work was partially supported by PROMEP, DAIPUG,
+CAIP-UG, PIFI, I0101/131/07 C-234/07 of the Instituto
+Avanzado de Cosmologia (IAC) collaboration,
+DGAPA-UNAM grant No. IN115311, and CONACyT
+México under grants 167335, 182445. AXGM is very
+grateful to the members of the Departamento de Física
+at Universidad de Guanajuato for their hospitality.
+
+\clearpage
+
+\bibliographystyle{plain}
+\bibliography{ref.bib}
+
+
+\end{document}
+
